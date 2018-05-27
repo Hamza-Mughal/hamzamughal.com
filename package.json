@@ -1,0 +1,33 @@
+{
+  "name": "hamzamughal.com",
+  "version": "1.0.0",
+  "description": "Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "echo \"npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hamza-Mughal/hamzamughal.com.git"
+  },
+  "keywords": [
+    "personal-website"
+  ],
+  "author": "Hamza Mughal",
+  "license": "ISC",
+  "dependencies": {
+    "babel-eslint": "^8.2.3",
+    "browser-sync": "^2.24.4",
+    "express": "^4.16.3",
+    "gulp": "^3.9.1",
+    "gulp-exec": "^3.0.1",
+    "gulp-sass": "^4.0.1",
+    "jquery": "^3.3.1",
+    "nodemon": "^1.17.5"
+  },
+  "bugs": {
+    "url": "https://github.com/Hamza-Mughal/hamzamughal.com/issues"
+  },
+  "homepage": "https://github.com/Hamza-Mughal/hamzamughal.com#readme"
+}
