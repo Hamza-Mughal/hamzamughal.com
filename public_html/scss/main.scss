@@ -1,0 +1,26 @@
+
+body {
+  background-color: #f7f4f0;
+}
+
+#navbar {
+  padding: 5px;
+  display: block;
+  text-align: center;
+  li {
+    list-style: none;
+    text-align: center;
+    width: 8em;
+    display: inline-block;
+    padding: .1em;
+    padding-right: 50px;
+    padding-left: 10px;
+    border-radius: 20px;
+    a {
+      text-decoration: none;
+      font-size: 1.5em;
+      color: black;
+      font-family: Helvetica;
+    }
+  }
+}

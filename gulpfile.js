@@ -8,7 +8,7 @@ gulp.task("sass", function() {
   return gulp.src(["public_html/scss/*.scss"])
       .pipe(sass())
        //the css desctination is in the css folder
-      .pipe(gulp.dest("public_html/public/css"))
+      .pipe(gulp.dest("public_html/css"))
       .pipe(browserSync.stream());
 });
 
@@ -17,7 +17,11 @@ gulp.task("serve", ["nodemon"], function() {
   browserSync.init(null, {
         proxy: "http://localhost:3002", // port of node server
   });
+  gulp.watch(["public_html/scss/*.scss"], ["sass"]);
+  gulp.watch("public_html/*.html").on("change", browserSync.reload);
 });
+
+
 
 gulp.task("nodemon", function (cb) {
     var cbCalled = false;
