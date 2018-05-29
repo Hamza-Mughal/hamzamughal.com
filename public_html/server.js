@@ -11,6 +11,17 @@ app.get("/css/:fileName", function(req, res){
   res.sendFile("/css/" + req.params.fileName, {root: __dirname });
 });
 
+app.get("/html/:fileName", function(req, res){
+  res.setHeader("Content-Type", "text/css");
+  res.sendFile("/html/" + req.params.fileName, {root: __dirname });
+});
+
+
+app.get("/js/:fileName", function(req, res){
+  res.setHeader("Content-Type", "text/css");
+  res.sendFile("/js/" + req.params.fileName, {root: __dirname });
+});
+
 app.listen(3002, function () {
   console.info("Port 3002");
 });
