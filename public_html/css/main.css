@@ -20,6 +20,13 @@ body {
       color: black;
       font-family: Helvetica; }
 
-.welcome-message {
+.welcome-message h1 {
   text-align: center;
-  font-weight: normal; }
+  font-weight: normal;
+  animation: fadein 2s; }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
