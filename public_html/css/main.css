@@ -26,7 +26,7 @@ body {
 .welcome-message h1 {
   text-align: center;
   font-weight: normal;
-  animation: fadein 2s; }
+  animation: fadein 1s; }
 
 @keyframes fadein {
   from {
@@ -43,12 +43,20 @@ body {
   .paragraph .paragraph-body h3 {
     font-weight: normal; }
 
+.image {
+  position: relative;
+  max-height: 80vh;
+  max-width: 30vw;
+  width: auto;
+  height: auto;
+  float: right;
+  animation: fadein 3s; }
+
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #00baff;
-  min-width: 160px;
-  border-radius: 15px; }
+  min-width: 110px; }
 
 .dropdown-content a {
   padding: 12px 16px;
