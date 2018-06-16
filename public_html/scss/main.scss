@@ -39,3 +39,18 @@ body {
       opacity: 1;
     }
 }
+
+
+.paragraph {
+  animation: fadein 2s;
+  .paragraph-header {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: normal;
+  }
+  .paragraph-body {
+    h3 {
+        font-weight: normal;
+    }
+  }
+}

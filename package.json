@@ -24,6 +24,7 @@
     "gulp-exec": "^3.0.1",
     "gulp-sass": "^4.0.1",
     "jquery": "^3.3.1",
+    "nodemailer": "^4.6.7",
     "nodemon": "^1.17.5"
   },
   "bugs": {
