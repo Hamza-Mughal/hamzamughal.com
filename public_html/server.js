@@ -28,6 +28,11 @@ app.get("/contact", function(req, res){
 
 });
 
+app.get("/about", function(req, res){
+  res.setHeader("Content-Type", "text/html");
+  res.sendFile("/html/" + "about.html", {root: __dirname });
+
+});
 app.get("/js/:fileName", function(req, res){
   res.setHeader("Content-Type", "text/css");
   res.sendFile("/js/" + req.params.fileName, {root: __dirname });
