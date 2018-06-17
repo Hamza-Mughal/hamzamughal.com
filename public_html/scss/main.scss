@@ -63,14 +63,12 @@ body {
 
 .image {
   position: relative;
-  max-height: 80vh;
-  max-width: 30vw;
-    width: auto;
-    height: auto;
-  //  left: 1200px;
-//    bottom: 110px;
-float:right;
-animation: fadein 3s;
+  max-height: 100vh;
+  max-width: 40vw;
+  width: auto;
+  height: auto;
+  float:right;
+  animation: fadein 3s;
 }
 
 
@@ -78,8 +76,9 @@ animation: fadein 3s;
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #00baff;
+    background-color: #04b6b1;
     min-width: 110px;
+    animation: fadein .8s;
 }
 
 .dropdown-content a {
