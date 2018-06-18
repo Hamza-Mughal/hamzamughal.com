@@ -32,13 +32,15 @@ app.get("/github", function(req, res){
 
 });
 
-app.get("/about", function(req, res){
+app.get("/games", function(req, res){
   res.setHeader("Content-Type", "text/html");
-  res.sendFile("/html/" + "about.html", {root: __dirname });
+  res.sendFile("/html/" + "games.html", {root: __dirname });
 });
 
+
+
 app.get("/images/:fileName", function(req, res){
-  res.setHeader("Content-Type", "text/css");
+  res.setHeader("Content-Type", "text/image");
   res.sendFile("/images/" + req.params.fileName, {root: __dirname });
 });
 
@@ -53,5 +55,5 @@ app.listen(3002, function () {
 
 app.get("*", function(req, res){
   res.setHeader("Content-Type", "text/html");
-  res.sendFile("/index.html", {root: __dirname });
+  res.sendFile("/html/error.html", {root: __dirname });
 });
