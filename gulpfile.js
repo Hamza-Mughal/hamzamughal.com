@@ -19,6 +19,7 @@ gulp.task("serve", ["nodemon"], function() {
   });
   gulp.watch(["public_html/scss/*.scss"], ["sass"]);
   gulp.watch("public_html/*.html").on("change", browserSync.reload);
+  gulp.watch("public_html/html/*.html").on("change", browserSync.reload);
 });
 
 
