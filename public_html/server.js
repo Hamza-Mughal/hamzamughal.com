@@ -45,7 +45,7 @@ app.get("/images/:fileName", function(req, res){
 });
 
 app.get("/js/:fileName", function(req, res){
-  res.setHeader("Content-Type", "text/css");
+  res.setHeader("Content-Type", "text/javascript");
   res.sendFile("/js/" + req.params.fileName, {root: __dirname });
 });
 
