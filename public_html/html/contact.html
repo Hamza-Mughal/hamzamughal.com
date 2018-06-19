@@ -11,11 +11,36 @@
 </div>
 </header>
 <body>
-<form>
 
-<div>
-  <h1 style="text-align: center;">Fill Out This Form To Contact me</h3>
+<div style="text-align:center;" class="paragraph">
+  <h1>Contact Form</h3>
 </div>
+
+<form action="/contact" method="post" role="form" class="contact">
+  <div>
+    <label for="name">Name</label>
+  </div>
+  <div>
+        <input id="name" name="name" type="text" placeholder="Your Name" required="required" maxlength="30">
+  </div>
+  <div>
+    <label for="email">Email</label>
+  </div>
+  <div>
+        <input id="email" name="email" type="text" placeholder="Your Email" required="required" maxlength="50">
+  </div>
+  <div>
+    <label for="email-title">Email Title</label>
+  </div>
+  <div>
+        <input id="email-title" name="email-title" type="text" placeholder="Email Title" required="required" maxlength="30">
+  </div>
+  <div>
+    <label for="body">Email Body</label>
+  </div>
+  <div>
+        <textarea id="body" name="body" type="text" required="required" maxlength="500"></textarea>
+  </div>
 <div align="center" class="g-recaptcha" data-sitekey="6LdUT18UAAAAADydn4szsc3WEGsKvKmBSnHadE4m"></div>
 </form>
 
