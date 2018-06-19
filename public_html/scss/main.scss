@@ -29,13 +29,17 @@ body {
   }
 }
 
+.contact-header {
+  font-size: 1em;
+  font-family: Helvetica;
+}
 .contact {
   display: grid;
   text-align: center;
   justify-content: center;
   animation: fadein 2s;
   div {
-    margin-top: 5px;
+    margin-top: 2.5px;
     label {
       font-size: 40px;
     }
@@ -51,7 +55,16 @@ body {
       -moz-box-sizing: border-box;
       box-sizing: border-box;
       width: 100%;
-      height: 275px;
+      height: 250px;
+    }
+    button {
+      width: 35%;
+      height: 90px;
+      background-color: red;
+      border-radius: 8px;
+      font-size: 50px;
+      font-family: Verdana;
+      //
     }
   }
 }
