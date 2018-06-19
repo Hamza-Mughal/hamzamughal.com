@@ -2,6 +2,9 @@ var express = require("express");
 var app = express();
 
 app.use(express.static(__dirname + "/images/"));
+var bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json())
 require("dotenv").config();
 console.log(process.env.FOO);
 app.get("/", function(req, res){
@@ -20,6 +23,17 @@ app.get("/html/:fileName", function(req, res){
 
 });
 
+app.post("/contact", function(req, res){
+  console.log(req.body.name);
+  if(req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response'] === '' || req.body['g-recaptcha-response'] === null)
+  {
+    console.log("Didnt complete the recaptcha...");
+    res.send("Mail Sent Successfully"
+      + ". Return to homepage <a href='/'>here</a>.");
+  }
+  console.log("Captcha Success");
+
+});
 app.get("/contact", function(req, res){
   res.setHeader("Content-Type", "text/html");
   res.sendFile("/html/" + "contact.html", {root: __dirname });

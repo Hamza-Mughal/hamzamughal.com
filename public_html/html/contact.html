@@ -4,6 +4,7 @@
 <link rel="stylesheet" href="./css/main.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="./js/nav.js"></script>
+<script src="./js/contact.js"></script>
 <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <header>
@@ -16,7 +17,7 @@
   <h1>Contact Form</h3>
 </div>
 
-<form action="/contact" method="post" role="form" class="contact">
+<form action="/contact" method="post" role="form" class="contact" onsubmit ="return validateForm()">
   <div>
     <label for="name">Name</label>
   </div>
@@ -41,10 +42,10 @@
   <div>
         <textarea id="body" name="body" type="text" required="required" maxlength="500"></textarea>
   </div>
-<div align="center" class="g-recaptcha" data-sitekey="6LdUT18UAAAAADydn4szsc3WEGsKvKmBSnHadE4m"></div>
-<div>
-<button type="submit" value="submit">Submit</button>
-</div>
+  <div align="center" id="g-recaptcha" class="g-recaptcha" data-sitekey="6LdUT18UAAAAADydn4szsc3WEGsKvKmBSnHadE4m" data-callback="correctCaptcha"></div>
+  <div>
+    <button type="submit" value="submit">Submit</button>
+  </div>
 </form>
 
 </body>
