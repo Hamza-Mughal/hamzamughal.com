@@ -109,8 +109,10 @@ body {
   max-width: 40vw;
   width: auto;
   height: auto;
-  float:right;
   animation: fadein 3s;
+  display: block;
+  top: -175px;
+  float: right;
 }
 
 
@@ -151,7 +153,7 @@ body {
 .GTA-info {
   position: absolute;
   float: right;
-  padding-left: 1350px;
+  padding-left: 1250px;
   .textbox-border {
     width: 500px;
 border: solid red 2px;
@@ -160,5 +162,22 @@ border: solid red 2px;
     font-size: 1.6em;
     text-align: center;
     padding-left: 5px;
+  }
+}
+
+@media all and (min-width:960px) and (max-width: 1024px) {
+  .GTA-info {
+    position: relative;
+    float: right;
+    padding-left: 1250px;
+    .textbox-border {
+      width: 500px;
+  border: solid red 2px;
+    }
+    .GTA-header {
+      font-size: 1.6em;
+      text-align: center;
+      padding-left: 5px;
+    }
   }
 }
