@@ -110,7 +110,6 @@ body {
   width: auto;
   height: auto;
   animation: fadein 3s;
-  display: block;
   top: -175px;
   float: right;
 }
@@ -165,7 +164,19 @@ border: solid red 2px;
   }
 }
 
-@media all and (min-width:960px) and (max-width: 1024px) {
+@media all and (min-width:200px) and (max-width: 1564px) {
+  .image {
+    position: relative;
+    max-height: 100vh;
+    max-width: 40vw;
+    width: auto;
+    height: auto;
+    animation: fadein 3s;
+    display: block;
+    top: -175px;
+    padding-right:15px;
+    padding-top:30px;
+  }
   .GTA-info {
     position: relative;
     float: right;
