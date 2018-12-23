@@ -7,8 +7,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json())
 require("dotenv").config();
 
-var nodemailer = require('nodemailer');
-
+var nodemailer = require("nodemailer");
+var https = require("https");
 var transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
@@ -49,7 +49,7 @@ app.post("/contact", function(req, res){
         + ". Return to the contact page <a href='/contact'>here</a>.");
     }
   });
-  if(req.body['g-recaptcha-response'] === undefined || req.body['g-recaptcha-response'] === '' || req.body['g-recaptcha-response'] === null)
+  if(req.body["g-recaptcha-response"] === undefined || req.body["g-recaptcha-response"] === "" || req.body["g-recaptcha-response"] === null)
   {
 
     res.setHeader("Content-Type", "text/html");
@@ -61,7 +61,7 @@ app.post("/contact", function(req, res){
     console.log("Captcha Success");
     var mailOptions = {
       from: req.body.email,
-      to: 'hmughal2@masonlive.gmu.edu',
+      to: "hmughal2@masonlive.gmu.edu",
       subject: req.body["email-title"],
       text: req.body.name + " (email: " + req.body.email
       + ") has sent a new message: \n\n" + req.body.body
@@ -70,7 +70,7 @@ app.post("/contact", function(req, res){
     if (error) {
       console.log(error);
     } else {
-      console.log('Email sent: ' + info.response);
+      console.log("Email sent: " + info.response);
     }
   });
   res.setHeader("Content-Type", "text/html");

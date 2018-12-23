@@ -147,3 +147,18 @@ body {
     display: block;
     z-index: 9999;
 }
+
+.GTA-info {
+  position: absolute;
+  float: right;
+  padding-left: 1350px;
+  .textbox-border {
+    width: 500px;
+border: solid red 2px;
+  }
+  .GTA-header {
+    font-size: 1.6em;
+    text-align: center;
+    padding-left: 5px;
+  }
+}
