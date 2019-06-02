@@ -86,9 +86,12 @@ body {
   max-width: 40vw;
   width: auto;
   height: auto;
-  animation: fadein 3s;
-  top: -175px;
-  float: right; }
+  float: right;
+  animation: fadein 3s; }
+
+.boxed {
+  border: 1px solid black;
+  margin-bottom: 30px; }
 
 .dropdown-content {
   display: none;
@@ -120,7 +123,7 @@ body {
 .GTA-info {
   position: absolute;
   float: right;
-  padding-left: 1250px; }
+  padding-left: 1350px; }
   .GTA-info .textbox-border {
     width: 500px;
     border: solid red 2px; }
@@ -128,27 +131,3 @@ body {
     font-size: 1.6em;
     text-align: center;
     padding-left: 5px; }
-
-@media all and (min-width: 200px) and (max-width: 1564px) {
-  .image {
-    position: relative;
-    max-height: 100vh;
-    max-width: 40vw;
-    width: auto;
-    height: auto;
-    animation: fadein 3s;
-    display: block;
-    top: -175px;
-    padding-right: 15px;
-    padding-top: 30px; }
-  .GTA-info {
-    position: relative;
-    float: right;
-    padding-left: 1250px; }
-    .GTA-info .textbox-border {
-      width: 500px;
-      border: solid red 2px; }
-    .GTA-info .GTA-header {
-      font-size: 1.6em;
-      text-align: center;
-      padding-left: 5px; } }

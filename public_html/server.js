@@ -1,6 +1,8 @@
 var express = require("express");
 var app = express();
 var Request = require("request");
+var path = require("path");
+var fs = require("fs");
 app.use(express.static(__dirname + "/images/"));
 var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -91,12 +93,21 @@ app.get("/github", function(req, res){
 
 });
 
+app.get("/slides", function(req, res){
+  res.setHeader("Content-Type", "text/html");
+  res.sendFile("/html/" + "slides.html", {root: __dirname });
+
+});
+
 app.get("/games", function(req, res){
   res.setHeader("Content-Type", "text/html");
   res.sendFile("/html/" + "games.html", {root: __dirname });
 });
 
-
+app.get("/papers", function(req, res){
+  res.setHeader("Content-Type", "text/html");
+  res.sendFile("/html/" + "papers.html", {root: __dirname });
+});
 
 app.get("/images/:fileName", function(req, res){
   res.setHeader("Content-Type", "text/image");
@@ -106,6 +117,48 @@ app.get("/images/:fileName", function(req, res){
 app.get("/js/:fileName", function(req, res){
   res.setHeader("Content-Type", "text/javascript");
   res.sendFile("/js/" + req.params.fileName, {root: __dirname });
+});
+
+app.get("/downloadFile", function (req, res) {
+  //console.log(__dirname);
+   var file = path.join(__dirname, "file.pdf");
+   res.download(file, function (err) {
+       if (err) {
+           console.log("Error");
+           console.log(err);
+       } else {
+           console.log("Success");
+       }
+   });
+});
+
+app.get("/downloadZip", function (req, res) {
+  //console.log(__dirname);
+   var file = path.join(__dirname, "zipTest.zip");
+   res.download(file, function (err) {
+       if (err) {
+           console.log("Error");
+           console.log(err);
+       } else {
+           console.log("Success");
+       }
+   });
+});
+
+app.get("/papers/:fileName", function (req, res) {
+    var filePath = __dirname + "/papers";
+    console.log(req.params.fileName);
+    console.log(filePath);
+
+    fs.readFile(filePath + "/" + req.params.fileName + ".pdf", function (err, data){
+
+        res.contentType("application/pdf");
+        res.send(data);
+        if(err){
+
+          console.log(err);
+        }
+    });
 });
 
 app.listen(3002, function () {
