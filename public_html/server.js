@@ -145,6 +145,22 @@ app.get("/downloadZip", function (req, res) {
    });
 });
 
+app.get("/slides/:fileName", function (req, res) {
+    var filePath = __dirname + "/slides";
+    console.log(req.params.fileName);
+    console.log(filePath);
+
+    fs.readFile(filePath + "/" + req.params.fileName + ".pdf", function (err, data){
+
+        res.contentType("application/pdf");
+        res.send(data);
+        if(err){
+
+          console.log(err);
+        }
+    });
+});
+
 app.get("/papers/:fileName", function (req, res) {
     var filePath = __dirname + "/papers";
     console.log(req.params.fileName);

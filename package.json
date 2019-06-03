@@ -22,12 +22,11 @@
     "browser-sync": "^2.24.4",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
-    "gulp": "^3.9.1",
     "gulp-exec": "^3.0.1",
     "gulp-sass": "^4.0.1",
     "jquery": "^3.3.1",
     "nodemailer": "^4.6.7",
-    "nodemon": "^1.17.5"
+    "nodemon": "^1.19.1"
   },
   "bugs": {
     "url": "https://github.com/Hamza-Mughal/hamzamughal.com/issues"
@@ -35,6 +34,7 @@
   "homepage": "https://github.com/Hamza-Mughal/hamzamughal.com#readme",
   "devDependencies": {
     "babel-eslint": "^8.2.3",
-    "eslint": "^4.19.1"
+    "eslint": "^4.19.1",
+    "gulp": "^4.0.2"
   }
 }
