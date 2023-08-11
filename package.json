@@ -7,10 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp"
   },
-  "env": {
-    "key": "6LdUT18UAAAAAPKSBU-fd59r-aI0znpJCfBRAk4z",
-    "EmailPassword": "Dogcat123"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Hamza-Mughal/hamzamughal.com.git"
