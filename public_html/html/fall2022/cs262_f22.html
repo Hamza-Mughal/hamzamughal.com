@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="./css/main.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="./js/nav.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script>
+$("button").click(function() {
+    $('html,body').animate({
+        scrollTop: $(".schedule").offset().top},
+        'slow');
+});
+</script>
+</head>
+<header>
+<div id="navbar" class="navbar">
+</div>
+</header>
+<body>
+
+  <div style="text-align:center;" class="paragraph">
+      <h1>CS 262 Fall 2022 - Introduction to Low-Level Programming</h1>
+	</div>
+	<div class="paragraph">
+	<h2>Course Basics</h2>
+	  <div style="text-indent:25px;" class="paragraph-body">
+		  <h3 style="margin:0">Instructor: Hamza Mughal</h3>
+		  <h3 style="margin:0">Email: hmughal2@gmu.edu (Please use Piazza for all course contact)</h3>
+		  <h3 style="margin:0">Office: BUCHAN D217F</h3>
+		  <h3 style="margin:0">Office Hours: TBD, anytime electronically via Piazza or by appointment</h3>
+		  <h3 style="margin:0">Section 03, 04, 05</h3>
+		  <h3 style="margin:0"> <a href="#schedule">Tentative Schedule</a></h3>
+	  </div>
+	  <div style="text-indent:25px; margin-top:25px;" class="paragraph-body">
+		  <h3 style="margin:0">Instructor: Dr. Ana Loreto Gonzalez Hernandez</h3>
+		  <h3 style="margin:0">Email: loreto@gmu.edu</h3>
+		  <h3 style="margin:0">Office: ENGR 2707</h3>
+		  <h3 style="margin:0">Office Hours: TBD, anytime electronically via Piazza or by appointment</h3>
+		  <h3 style="margin:0">Section 01, 02</h3>
+	  </div>
+	  <div style="text-indent:25px; margin-top:25px;" class="paragraph-body">
+		  <h3 style="margin:0">GTAs: TBA</h3>
+		  <h3 style="margin:0">UTAs: TBA</h3>
+	  </div>	  
+	</div>	
+	<div class="paragraph">
+			<h2>Prerequisites</h2>
+	  <div style="text-indent:25px;" class="paragraph-body">
+		  <h3>C or better in CS 211 or CS 222, and C or better in CS 110 (CS 110 can be a co-requisite with CS 262)</h3>
+	  </div>
+	</div>
+	<div class="paragraph">
+			<h2>Readings</h2>
+	  <div style="text-indent:25px;" class="paragraph-body">
+		  <h3>Kernighan and Ritchie, The C Programming Language, 2nd ed., Prentice Hall, 1988 (required)</h3>
+	  </div>
+	  	  <div style="text-indent:25px;" class="paragraph-body">
+		  <h3>Byron S. Gottfried, Programming with C, 2nd ed., Schumm’s Outline, 1996 or the latest (complementary)</h3>
+	  </div>
+	  	  	  <div style="text-indent:25px;" class="paragraph-body">
+		  <h3>Peter Printz and Tony Crawford, C in a Nutshell: A Desktop Quick Reference, 1st ed.,
+O'Reilly', 2006
+ (complementary)</h3>
+	  </div>
+	  	  	  	  <div style="text-indent:25px;" class="paragraph-body">
+		  <h3>David Griffiths and Dawn Griffiths, Head First C, 1st ed., O'Reilly', 2012(complementary)</h3>
+	  </div>
+	</div>
+	<div class="paragraph">
+			<h2>Course Description</h2>
+	  <div style="text-indent:25px;" class="paragraph-body">
+		  <h3> Most high-level programming languages (and particularly Java) insulate the programmer from the realities of the hardware on which the programs will run. C is the exception since it was originally designed to implement the Unix operating system. C offers the programmer direct access to much of the underlying hardware and, for programs running under Unix, direct access to operating system services. For these reasons C remains the language of choice for systems programming.</h3>
+	  </div>
+	</div>
+	<div class="paragraph">
+			<h2>Learning Outcomes</h2>
+	  <div style="text-indent:25px;" class="paragraph-body">
+		  <h3 style="margin:0">Be able to implement, test and debug a designed solution to a problem in a low-level programming language, specifically the C programming language.</h3>
+		  <h3 style="margin:0">Demonstrate a good understanding of C language constructs such as pointers, dynamic memory management, and address arithmetic.</h3>
+		  <h3 style="margin:0">Demonstrate a good understanding of C libraries for input and output, and the interface between C programs and the UNIX operating system.</h3>
+		  <h3 style="margin:0">Demonstrate an ability to use UNIX tools for program development and debugging.</h3>
+	  </div>
+	</div>	
+	<div class="paragraph">
+			<h2>Course Topics</h2>
+	  <div style="text-indent:25px;" class="paragraph-body">
+		  <h3>This is a course on "low-level" programming using C. We will learn C with heavy emphasis on pointer operations.</h3>
+	  </div>
+	</div>
+	<div class="paragraph">
+			<h2>List of Planned Topics (in no particular order)</h2>
+	  <div style="text-indent:25px;" class="paragraph-body">
+		  <h3 style="margin:0">C Types, Operators, and Expressions</h3>
+		  <h3 style="margin:0">Basic I/O, Input and Output Libraries</h3>
+		  <h3 style="margin:0">Control Flow</h3>
+		  <h3 style="margin:0">Strings</h3>
+		  <h3 style="margin:0">Pointers and Arrays</h3>
+		  <h3 style="margin:0">Dynamic memory allocation</h3>
+		  <h3 style="margin:0">Structures</h3>
+		  <h3 style="margin:0">The Unix System Interface</h3>
+		  <h3 style="margin:0">vi/vim</h3>
+		  <h3 style="margin:0">Makefiles, using multiple source files</h3>
+		  <h3 style="margin:0">Debugging and gdb</h3>
+		  <h3 style="margin:0">File I/O</h3>
+	  </div>
+	  </div>
+	<div class="paragraph">
+			<h2>Grading</h2>
+	  <div style="text-indent:25px;" class="paragraph-body">
+		  <h3 style="margin:0">20% Lab Assignments (lowest lab dropped)</h3>
+		  <h3 style="margin:0">30% Projects (three programming assignments)</h3>
+		  <h3 style="margin:0">10% Quizzes (in person)</h3>
+		  <h3 style="margin:0">20% Midterm (in person)</h3>
+		  <h3 style="margin:0">20% Final (in person, cumulative)</h3>
+		  <h3 style="font-weight:bold;">Per departmental policy, you must pass a significant exam threshold to receive a passing grade in
+this class regardless of your performance on other assignments. To receive a passing grade in this
+course, your average exam grade MUST be >= 60%</h3>
+	  </div>
+	  </div>
+	<div class="paragraph">
+			<h2>Grade Cutoffs</h2>
+	  <div style="text-indent:25px;" class="paragraph-body">
+		  <h3 style="margin:0">A+ [98-100] A [92-98) A- [90-92)</h3>
+		  <h3 style="margin:0">B+ [88-90) B [82-88)  B- [80-82)</h3>
+		  <h3 style="margin:0">C+ [78-80) C [72-78)  C- [70-72)</h3>
+		  <h3 style="margin:0">D [60-70)</h3>
+		  <h3 style="margin:0">F [0-60)</h3>
+	  </div>
+	  </div>
+	<div class="paragraph">
+			<h2>Labs</h2>
+	  <div style="text-indent:25px;" class="paragraph-body">
+		  <h3 style="margin:0">A short programming assignment will be given at the beginning of each lab.  The lab instructor and one or more UTAs will be available to help students with the assignment. If not completed, the lab may be taken home. Lab assignments will be due either at the designated time for submission on Blackboard or (if no submission is given on Blackboard) at the beginning of the following lab period. No late lab assignments will be accepted.</h3>
+	  </div>
+	  </div>
+	<div class="paragraph">
+			<h2>Projects</h2>
+	  <div style="text-indent:25px;" class="paragraph-body">
+		  <h3 style="margin:0"> In addition to the labs, there will be multiple larger programming projects.  Programming assignments will be posted on Blackboard as they are assigned and must be submitted on Blackboard by the assigned due date.  If your program is incomplete, you may still submit it for partial credit.  However, your code must run without obvious errors (even if all functionality is not present).  Building your programs in a modular fashion and debugging as you go are crucial concepts in program development.  Additionally, your TA relies on running your program as part of your grade determination. Accordingly, any programming assignment that is submitted but either does not compile or has major errors when it is run will receive no more than 50% credit.  </h3>
+	  </div>
+	  </div>
+	<div class="paragraph">
+			<h2>Late Work</h2>
+	  <div style="text-indent:25px;" class="paragraph-body">
+		  <h3 style="margin:0">Late projects and labs will be penalized 10% per day (incl. weekend days/holidays). You should recognize that this can cause major penalties for incomplete programs, so start work early! If your program isn't the way you'd like it to be when the deadline is near, submit it anyway for partial credit. In fact, submit early and often! The system permits you to retrieve and resubmit your assignment until the due date, so you may resubmit if you improve your program prior to the deadline. </h3>
+		  <h3 style="margin:0; font-weight:bold;">The latest you can turn in work is 48 hours after the deadline</h3>
+		  <h3 style="margin:0">Students begin the semester with three One-Day-Late tokens. If you have a token left and turn in work late, the token is spent and no other deduction is made on the work.</h3>	  
+	  </div>
+	  </div>
+	<div class="paragraph">
+			<h2>Class Communications</h2>
+	  <div style="text-indent:25px;" class="paragraph-body">
+		  <h3 style="margin:0"> CS 262 will be using Piazza and Blackboard for most class communications. You are responsible for any notifications or information posted on Blackboard/Piazza either by your instructor, your GTA or the class UTA(s), and you will need to check the systems regularly for such notices. Some information may be disseminated through these systems rather than in class. Individual communications with the instructor/GTA/UTA may be done by via Piazza utilizing private posts</h3>
+	  </div>
+	  </div>
+	<div class="paragraph">
+			<h2>Special Accomodations</h2>
+	  <div style="text-indent:25px;" class="paragraph-body">
+		  <h3 style="margin:0">If you are a student with a disability, please see your instructor and contact the Office of Disability Services (ODS) at (703) 993-2474. All academic accommodations must be arranged through the ODS: http://ods.gmu.edu</h3>
+	  </div>
+	  </div>
+	<div class="paragraph">
+			<h2>Privacy and FERPA</h2>
+	  <div style="text-indent:25px;" class="paragraph-body">
+		  <h3 style="margin:0">Students must use their Mason email account to receive important University
+information, including communications related to this class. The instructor and GTAs
+can not respond to messages sent from or send messages to a non-Mason email
+address. We will not list your Mason email address on any public forum or provide it to
+any other students. Your Mason email address will be provided to grading staff (GTA
+and graders). If this is an issue, please contact the instructor so that we can figure out
+another option. Video recordings of class meetings that are shared only with the
+instructors and students officially enrolled in a class do not violate FERPA or any other privacy expectation. All course materials posted to Blackboard or any other course site are
+private; by federal law, any materials that identify specific students (via their name,
+voice, or image) must not be shared with anyone not enrolled in this class</h3>
+	  </div>
+	  </div>
+	<div class="paragraph">
+			<h2>Inclusion</h2>
+	  <div style="text-indent:25px;" class="paragraph-body">
+		  <h3 style="margin:0">Every student in this class, regardless of background, sex, gender, race, ethnicity, class,
+political affiliation, physical or mental ability, veteran status, nationality, or any other
+identity category, is an equal member of our class. If you encounter any barriers to
+your inclusion, please contact me</h3>
+	  </div>
+	  </div>	  
+	<div class="paragraph hover_img">
+			<a><h2>Honor Code</h2><span><img src="images/thanos_cheating.PNG" alt="image" height="400" /> </span></a>
+	  <div style="text-indent:25px;" class="paragraph-body">
+		  <h3 style="margin:0">GMU is an Honor Code university; please see the <a href="https://oai.gmu.edu/mason-honor-code/">Office for Academic Integrity</a> for a full description of the code and the honor committee process, and the <a href="https://cs.gmu.edu/resources/honor-code/">Computer Science Departments Honor Code Policies</a> regarding programming assignments. The principle of academic integrity is taken very seriously and violations are treated gravely. What does academic integrity mean in this course? Essentially this: when you are responsible for a task, you will perform that task.  All class-related assignments are considered individual efforts unless explicitly expressed otherwise (in writing). Cheating on any assignment will be prosecuted and result in a notification of the Honor Committee as outlined in the GMU Honor Code. Sharing, collaboration, or looking at any code related to programming assignments that is not your own is considered cheating. Any attempts at copying or sharing code, algorithms, or other violations of the honor code simply will not be tolerated. We use automated software to flag suspicious cases, and then review them to find the cases that must be submitted to the Office of Academic Integrity. The penalty for cheating will always be far worse than a zero grade, to ensure it's not worth taking the chance. Another aspect of academic integrity is the free play of ideas. Vigorous discussion and debate are encouraged in this course, with the firm expectation that all aspects of the class will be conducted with civility and respect for differing ideas, perspectives, and traditions. When in doubt (of any kind) please ask for guidance and clarification.</h3>
+	  </div>
+	  </div>	  
+	<div class="paragraph">
+			<h2>Programming Policies</h2>
+	  <div style="text-indent:25px;" class="paragraph-body">
+		  <h3 style="margin:0">No sharing or discussion of code. Unless specifically stated otherwise, all assignments are individual projects, not group projects. Students are expected to do their own work, not to share programs with each other, nor copy programs from anyone else. This means you may not discuss program design or strategize solutions with anyone except your instructor or a course UTA or GTA. However, you may offer more limited assistance to your fellow students regarding specific questions on their programming assignments by responding to queries on Piazza. Any sharing of code or discussion of programming projects, except within the parameters of Blackboard, constitutes an honor code violation. Suspected honor code violations are taken very seriously, and will be reported to the Honor Committee. Read the  GMU Honor Code and CS Department Honor Code. You are bound by these codes.</h3>
+		  <h3 style="margin:0">No incorporation of code from any source external to the course. You may not incorporate code written by others, such as code found on the Internet or any of the numerous CS books available. You may freely use any code provided as part of the project specifications, without any need for crediting the source. However, if you use code provided by your instructor (other than that given as part of the project specifications) or from the course textbook, you must document what portion came from those sources.</h3>
+		  <h3 style="margin:0">Piazza. We encourage the use of Piazza to discuss assignments and assist one another with programming questions. You may ask questions or respond to queries on Piazza regarding projects or other assignments, so long as you do not post any C code or detailed pseudocode, and so long as you do not provide specific solutions to the overall problem or algorithm design (even in English). Often, students believe that "simple" code is acceptable to place on Piazza. However, because there is a wide variation in what different students and instructors regard as "simple," we must be very strict about the ban against Piazza code. Only an instructor, GTA or UTA is permitted to place code on Piazza unless it is code that has already been provided to all students (either as part of the assignment specification itself or within the class textbook).</h3>
+		  <h3 style="margin:0">Discussing Piazza postings outside of Piazza. Please note that Piazza assistance must remain on the forum. "Summarizing" Piazza statements or responses to another student verbally regarding an assignment is *not* acceptable, and is subject to the above ban on discussing assignment solutions. While it may seem harmless, Piazza was set up so that all assistance could be overseen by instructors/TAs/UTAs, and it is nearly impossible to truly duplicate Blackboard/Piazza discussion outside of the actual forum, thus creating the potential for either (unknowing) mistaken advice, or for unfair advantage by certain students. If you truly wish to assist a fellow student, encourage him or her to log onto Piazza, and direct him/her to specific postings you find helpful.</h3>
+		  <h3 style="margin:0">Back up your program regularly. You are expected to back up your program in separate files as you get different pieces working. Failure to do this may result in your getting a much lower grade on a program if last minute problems occur. (Accidentally deleting your program, having problems connecting, etc., will not be accepted as excuses.)</h3>
+		  <h3 style="margin:0">Keep an untouched copy of your final code submission. It is important that you not touch your programs once you have made your final submission. If there are any submission problems, consideration for credit will only be given if it can be verified that the programs were not changed after being submitted.</h3>
+		  <h3 style="margin:0">Code must run on Zeus using gcc. Students may develop programs using any computer system they have available. Please note, however, that submitted projects must run under the gcc compiler available on Zeus. Your documentation should clearly state which software was used for compilation, and once makefiles are introduced, a makefile should be included with each assignment submission. No extensions will be given due to compiler incompatibilities.</h3>		  
+	  </div>
+	  </div>
+	<div class="paragraph">
+			<h2>Electronic Devices</h2>
+	  <div style="text-indent:25px;" class="paragraph-body">
+		  <h3 style="margin:0">Please feel free to use laptops, tablets, etc. to take notes, review slides, etc. during class. If you know that you will need to be doing other things on your screen/device (answering emails, perusing tiktok etc), please sit in the back row to ensure that other students are not distracted by your screen. We all need to do this stuff some times, and I have no judgements on you if you choose to sit in back with your screen open - just do not distract those sitting around you.</h3>
+	  </div>
+	  </div>	  
+	<div class="paragraph">
+			<h2>In Class Activities</h2>
+	  <div style="text-indent:25px;" class="paragraph-body">
+		  <h3 style="margin:0">Most lectures will feature interactive activities and/or quizzes. These quizzes and activities are meant primarily to help me understand how well you (and the class as a whole) are understanding the material.</h3>  
+		   <h3 style="margin:0">You are strongly encouraged to bring your laptop or phone to class so that you can participate in the activities.
+</h3>	  
+	  </div>
+	  </div>
+	<div class="schedule" id="schedule">
+			<h2>Schedule (subject to change)</h2>
+	  <div>	  
+		<table>
+			<tbody style="font-size: 125%;">
+				<tr style="padding:500px;">
+					<th>#</th>
+					<th>Date</th>
+					<th>Topic</th>
+					<th>Reading</th>
+					<th>Notes</th>
+					<th>Slides</th>
+				</tr>
+				<tr >
+					<td style="padding: 10px;">1</td>
+					<td style="padding: 10px;">08/22/2022</td>
+					<td style="padding: 10px;">Class Overview, Introduction to C Programming, vi/vim</td>
+					<td style="padding: 10px;">KR Chapter 1</td>
+					<td style="padding: 10px;">Lab 1</td>
+					<td style="padding: 10px;"></td>
+				</tr>
+			</tbody>
+		</table>
+	  </div>
+	  </div>		  
+ 
+</body>
+</html>
