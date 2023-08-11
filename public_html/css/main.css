@@ -59,7 +59,7 @@ body {
       font-family: Verdana; }
 
 .welcome-message h1 {
-  /* text-align: center; */
+  text-align: center;
   font-weight: normal;
   animation: fadein 1s; }
 
@@ -131,20 +131,3 @@ body {
     font-size: 1.6em;
     text-align: center;
     padding-left: 5px; }
-
-html { scroll-behavior: smooth; } 
-
-.button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-}
-
-.hover_img a { position:relative; }
-.hover_img a span { position:absolute; display:none; z-index:99; }
-.hover_img a:hover span { display:block; }
