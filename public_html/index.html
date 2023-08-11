@@ -7,6 +7,7 @@
 <link rel="shortcut icon" href="/images/Myfavicon.ico" type="image/x-icon">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="./js/nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
 </head>
 <header>
 <div id="navbar" class="navbar">
@@ -14,78 +15,94 @@
 </header>
 <body>
   <div class="welcome-message">
-    <h1>Welcome To My Personal Website!</h1>
+    <h1>Hamza Mughal</h1>
   </div>
-    <div class="GTA-info">
-      <div class="textbox-border">
-        <h1 class="GTA-header">CS 112 GTA<br />Office Hours: T/R TBD @ TBD</h1>
-      </div>
-    </div>
 <div class="paragraph">
-  <h1 class="paragraph-header">Who Am I?</h1>
-  <div class="paragraph-body">
-      <h3>My name is Hamza Mughal. I graduated with an Bachelors degree
-      in Computer Science from George Mason University in Fairfax, Virginia!</h3>
+  <div style="text-indent:25px;" class="paragraph-body">
+      <h3 style="margin:0">Instructor</h3>
+	  <h3 style="margin:0">George Mason University</h3>
+	  <h3 style="margin:0">Department of Computer Science</h3>
+	  <h3 style="margin:0">Email: hmughal2@gmu.edu</h3>
+	  <h3 style="margin:0">Office: BUCHAN D217F</h3>	  
+  </div>
+</div>
+<hr style="border-top: 3px solid #bbb; margin-top: 20px;" class="paragraph">
+<div class="paragraph">
+	<h2>Courses</h2>
+  <div style="text-indent:25px;" class="paragraph-body">
+      <h3 style="margin:0">Instructor</h3>
+  <div style="text-indent:50px; margin-top:10px;" class="paragraph-body">
+      <h3 style="margin:0">CS 262</h3>
+  </div>
+    <div style="text-indent:75px;" class="paragraph-body">
+      <h3 style="margin:0">Fall 2022, <a href=/cs262>Spring 2023</a>, Fall 2023</h3>
+  </div>
+  <div style="text-indent:50px; margin-top:10px;" class="paragraph-body">
+      <h3 style="margin:0">CS 367</h3>
+  </div>
+    <div style="text-indent:75px;" class="paragraph-body">
+      <h3 style="margin:0"><a href=>Fall 2023</a></h3>
+  </div>
   </div>
 </div>
 <div class="paragraph">
-  <h1 class="paragraph-header">What Am I Doing Now?</h1>
-  <div class="paragraph-body">
-      <h3>Currently I am pursuing a
-      Masters degree in Computer Science at GMU.</h3>
+  <div style="text-indent:25px;" class="paragraph-body">
+      <h3 style="margin:0; margin-top:25px;">Teaching Assistant</h3>
+  <div style="text-indent:50px; margin-top:10px;" class="paragraph-body">
+      <h3 style="margin:0">CS 440 & CS 540</h3>
+	    <div style="text-indent:75px;" class="paragraph-body">
+      <h3 style="margin:0">Spring 2020</h3>
+	</div>
+  </div>
+    <div style="text-indent:50px; margin-top:10px;" class="paragraph-body">
+      <h3 style="margin:0">CS 475</h3>
+	    <div style="text-indent:75px;" class="paragraph-body">
+      <h3 style="margin:0">Fall 2019</h3>
+	</div>
+  </div>
+      <div style="text-indent:50px; margin-top:10px;" class="paragraph-body">
+      <h3 style="margin:0">CS 465</h3>
+	    <div style="text-indent:75px;" class="paragraph-body">
+      <h3 style="margin:0">Fall 2018, Spring 2019, Fall 2019</h3>
+	</div>
+  </div>
+        <div style="text-indent:50px; margin-top:10px;" class="paragraph-body">
+      <h3 style="margin:0">CS 325</h3>
+	    <div style="text-indent:75px;" class="paragraph-body">
+      <h3 style="margin:0">Spring 2019, Spring 2020</h3>
+	</div>
+  </div>
+          <div style="text-indent:50px; margin-top:10px;" class="paragraph-body">
+      <h3 style="margin:0">CS 112</h3>
+	    <div style="text-indent:75px;" class="paragraph-body">
+      <h3 style="margin:0">Summer 2019</h3>
+	</div>
+  </div>
+            <div style="text-indent:50px; margin-top:10px;" class="paragraph-body">
+      <h3 style="margin:0">CS 105</h3>
+	    <div style="text-indent:75px;" class="paragraph-body">
+      <h3 style="margin:0">Spring 2017</h3>
+	</div>
+  </div>
+              <div style="text-indent:50px; margin-top:10px;" class="paragraph-body">
+      <h3 style="margin:0">CS 367</h3>
+	    <div style="text-indent:75px;" class="paragraph-body">
+      <h3 style="margin:0">Fall 2017, Spring 2018</h3>
+	</div>
+  </div>
   </div>
 </div>
+<hr style="border-top: 3px solid #bbb; margin-top: 20px;" class="paragraph">
 <div class="paragraph">
-  <h1 class="paragraph-header">Classes Completed/To Be Taken</h1>
-  <div class="paragraph-body">
-      <h3>I have completed classes in Data Mining (CS 584), Databases (CS550), Software Testing (SWE637), Compilers (CS540), Computer System Performance Evaluation (CS672), and Info Security Theory Pratice (ISA562). I will be taking
-      Secure Software Design (SWE681) and Algorithms (CS583) next semester (Fall 2019).</h3>
+	<h2>Awards</h2>
+	<div style="text-indent:25px;" class="paragraph-body">
+	<h3 style="margin:0">Awarded by the Department of Computer Science</h3>
+  <div style="text-indent:25px;" class="paragraph-body">
+      <h3 style="margin:0; text-indent:50px">Distinguished Graduate Teaching Assistant Award (2019, 2020)</h3>
+	  <h3 style="margin:0; text-indent:50px">Outstanding Undergraduate Teaching Assistant Award (2018)</h3>
+	  <h3 style="margin:0; text-indent:50px">Outstanding Academic Achievement Award (2018)</h3>
+  </div>
   </div>
 </div>
-<div class="paragraph">
-
-  <h1 class="paragraph-header">Classes TA'd For</h1>
-  <div class="paragraph-body">
-      <h3>I have ta'd for the following courses: CS 465 (GTA F '18/S '19), CS 325 (GTA S '19), CS 367 (UTA F '17/S '18), CS 105 (UTA S '16)</h3>
-  </div>
-</div>
-<div class="paragraph">
-  <h1 class="paragraph-header">How Did I End Up In Computer Science?</h1>
-  <div class="paragraph-body">
-      <h3>When I started my time at
-          GMU, I had no idea  what I wanted to even do after High School (as many other prospective students do). During the summer
-          after High School had ended, I decided to take a free Python course where I had learned some very basic operations. Mind you,
-          majoring in Computer Science did not cross my mind at this moment. Fast foward a year into my Undergraduate: I was still undeclared,
-          and had to choose a major to begin making actual progress. My friend, Nabil Darwich, was majoring in Computer Science at the time,
-          and he would tell me about what he would be doing in his CS classes occasionally. Hearing about what he was learning excited me.
-          Me taking the python course over the summer a year earlier and Nabil's talks with me pushed me to pursue Computer Science as my career choice.
-        </h3>
-  </div>
-</div>
-<div class="paragraph">
-  <h1 class="paragraph-header">My Time As An Undergrad</h1>
-  <div class="paragraph-body">
-      <h3>I enjoyed my time as an undergraduate primarily because of some of the professors. I've had the great pleasure
-      of taking courses under excellent professors at GMU.
-      Additionally, I worked as an undergraduate teaching assistant for the CS department for three semesters. I assisted with
-      CS 105 (S '17) and CS 367 (F '17 & S '18). I immensely enjoyed working as a UTA as it allowed to me work with students to share my passion for Computer Science with them.
-    </h3>
-  </div>
-</div>
-<!--- <div class="paragraph">
-  <h1 class="paragraph-header">What Are My Future Plans?</h1>
-  <div class="paragraph-body">
-      <h3>Currently I am planning on pursuing a
-      Masters degree in Computer Science.</h3>
-  </div>
-</div> --->
-<div class="paragraph">
-  <h1 class="paragraph-header">Want To Contact Me?</h1>
-  <div class="paragraph-body">
-      <h3>Feel free to contact me by clicking <a style="text-decoration:none" href="/contact">here</a>.
-      I check my email multiple times a day, so chances are I will respond to you!</h3>
-  </div>
-</div>
-
 </body>
 </html>

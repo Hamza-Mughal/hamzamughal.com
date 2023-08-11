@@ -7,7 +7,7 @@ app.use(express.static(__dirname + "/images/"));
 var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json())
-require("dotenv").config();
+var dotenv = require("dotenv").config();
 
 var nodemailer = require("nodemailer");
 var https = require("https");
@@ -15,7 +15,7 @@ var transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
     user: "hamzamughaldotcom@gmail.com",
-    pass: process.env.EmailPassword
+    pass: "yfqmnzkvbjmrrsba"
   }
 });
 
@@ -39,23 +39,27 @@ app.get("/html/:fileName", function(req, res){
 app.post("/contact", function(req, res){
 
       let googleReq = "https://www.google.com/recaptcha/api/siteverify?secret="
-  + process.env.key + "&response=" + req.body["g-recaptcha-response"]
+  + "6LdUT18UAAAAAPKSBU-fd59r-aI0znpJCfBRAk4z" + "&response=" + req.body["g-recaptcha-response"]
   + "&remoteip=" + req.connection.remoteAddress;
   Request(googleReq, function(error, resp, body){
     body = JSON.parse(body);
+	console.log(process.env.key);
+	console.log(body);
     console.log(body.success);
     if(body.success === false){
-      res.setHeader("Content-Type", "text/html");
+   //   res.setHeader("content-type", "text/html");
       console.log("Didnt complete the recaptcha...");
-      return res.send("The contact form was not filled out correctly"
-        + ". Return to the contact page <a href='/contact'>here</a>.");
+ //     return res.send("The contact form was not filled out correctly"
+ //      + ". Return to the contact page <a href='/contact'>here</a>.");
+ 
     }
   });
+  console.log(process.env.key);
   if(req.body["g-recaptcha-response"] === undefined || req.body["g-recaptcha-response"] === "" || req.body["g-recaptcha-response"] === null)
   {
 
     res.setHeader("Content-Type", "text/html");
-    console.log("Didnt complete the recaptcha...");
+    console.log("Didnt complete the recaptcha.....");
     res.send("The contact form was not filled out correctly"
       + ". Return to the contact page <a href='/contact'>here</a>.");
   }
@@ -74,16 +78,17 @@ app.post("/contact", function(req, res){
     } else {
       console.log("Email sent: " + info.response);
     }
-  });
+  }); 
   res.setHeader("Content-Type", "text/html");
-  res.send("Your email has been sent successfully."
-  + ". Return to the home page <a href='/'>here</a>.");
+ res.send("Your email has been sent successfully."
+ + ". Return to the home page <a href='/'>here</a>.");
+//res.redirect('/');
   }
 });
 
 app.get("/contact", function(req, res){
   res.setHeader("Content-Type", "text/html");
-  res.sendFile("/html/" + "contact.html", {root: __dirname });
+//  res.sendFile("/html/" + "contact.html", {root: __dirname });
 
 });
 
@@ -93,10 +98,21 @@ app.get("/github", function(req, res){
 
 });
 
-app.get("/slides", function(req, res){
+app.get("/cs112", function(req, res){
   res.setHeader("Content-Type", "text/html");
-  res.sendFile("/html/" + "slides.html", {root: __dirname });
+  res.sendFile("/html/" + "cs112.html", {root: __dirname });
+});
 
+app.get("/fall2022/cs262_f22", function(req, res){
+  res.setHeader("Content-Type", "text/html");
+  console.log("cs262 accessed");
+  res.sendFile("/html/" + "cs262.html", {root: __dirname });
+});
+
+app.get("/cs262", function(req, res){
+  res.setHeader("Content-Type", "text/html");
+  console.log("cs262 accessed");
+  res.sendFile("/html/" + "cs262.html", {root: __dirname });
 });
 
 app.get("/games", function(req, res){
@@ -106,7 +122,7 @@ app.get("/games", function(req, res){
 
 app.get("/papers", function(req, res){
   res.setHeader("Content-Type", "text/html");
-  res.sendFile("/html/" + "papers.html", {root: __dirname });
+//  res.sendFile("/html/" + "papers.html", {root: __dirname });
 });
 
 app.get("/images/:fileName", function(req, res){
@@ -162,7 +178,7 @@ app.get("/slides/:fileName", function (req, res) {
 });
 
 app.get("/papers/:fileName", function (req, res) {
-    var filePath = __dirname + "/papers";
+/*    var filePath = __dirname + "/papers";
     console.log(req.params.fileName);
     console.log(filePath);
 
@@ -174,7 +190,7 @@ app.get("/papers/:fileName", function (req, res) {
 
           console.log(err);
         }
-    });
+    }); */
 });
 
 app.listen(3002, function () {
